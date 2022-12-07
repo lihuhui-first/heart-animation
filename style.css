@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#heart {
+    margin: 100px;
+    position: relative;
+    border: 1px solid black;
+    display: inline-block;
+    animation: heart 2.5s linear infinite alternate-reverse;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(2);
+    }
+}
+
+#heart>.left {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 100%;
+    right: 100%;
+    transform: rotate(45deg) translateX(35px);
+    border-radius: 50% 0% 0% 50%;
+    background: red;
+}
+
+#heart>.right {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    transform: rotate(45deg) translateX(35px);
+    border-radius: 50% 50% 0% 0%;
+    background: red;
+}
+
+#heart>.bottom {
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    position: absolute;
+    background: red;
+}
